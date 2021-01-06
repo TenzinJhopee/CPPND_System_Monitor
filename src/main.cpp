@@ -3,5 +3,6 @@
 
 int main() {
   System system;
-  NCursesDisplay::Display(system);
+  int n = system.Processes().size() <= 10 ? system.Processes().size() : 10;
+  NCursesDisplay::Display(system, n);
 }
